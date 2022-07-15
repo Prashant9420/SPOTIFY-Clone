@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 body{
-    background-color: #f0bbbb;
+    background-color: #5cba53;
     overflow: hidden;
 }
 *{
@@ -17,15 +17,22 @@ nav ul{
     height: 60px;
     background-color:black;
 }
+.buttons a{
+    text-decoration: none;
+    color: white
+}
 nav ul li.buttons{
     color:white;
     padding:0 12px;
+    text-decoration: none;
 }
 li.buttons:hover{
-    font-size: 30px;
-    background-color:white;
+    font-size: 25px;
     border-radius: 9px;
     height:30px;
+}
+li.buttons a:hover{
+    color:rgb(11, 229, 19);
 }
 .brand img{
     width:50px;
@@ -48,19 +55,64 @@ li.brand{
 /* Bottom */
 div.bottom{
     display: flex;
+    flex-direction:column;
     align-items:center;
     justify-content: center;
     position: sticky;
     bottom : 0;
-    height : 90px;
+    height : 80px;
     width: 100%;
     background-color: black;
     margin-top:300px;
+    color: white;
 }
 #range{
     width:800px;
+    cursor: pointer;
+}
+div.banner{
+    position: relative;
 }
 
 img.bg{
-    height:500px;
+    height:470px;
+}
+div.songs{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    color:white;
+    margin-right:500px;
+    margin-bottom:360px;
+    
+}
+.gaana i{
+    padding-right:10px;
+}
+img.icons{
+    height: 30px;
+    width: 30px;
+    margin-left:8px;
+    border-radius:40px;
+    padding-right: 10px;
+}
+.gaana{
+    display:flex;
+    justify-content:space-between;
+    flex-direction:row;
+    align-items:center;
+    border:2px solid white;
+    border-radius:30px;
+    margin-bottom: 5px;
+    width: 300px;
+    background-color: #5cba53;
+    color:black;
+    font-weight:bold;
+}
+.gaana:hover{
+    background-color: rgb(25, 83, 25);
+    color:white;
+}
+.play i{
+    padding:5px;
 }
