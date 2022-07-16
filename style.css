@@ -76,6 +76,7 @@ div.banner{
 
 img.bg{
     height:470px;
+    border-radius:20px;
 }
 div.songs{
     display: flex;
@@ -108,6 +109,7 @@ img.icons{
     background-color: #5cba53;
     color:black;
     font-weight:bold;
+    cursor:pointer;
 }
 .gaana:hover{
     background-color: rgb(25, 83, 25);
@@ -115,4 +117,13 @@ img.icons{
 }
 .play i{
     padding:5px;
+}
+#masterPlay{
+    cursor: pointer;
+}
+#backward{
+    cursor:pointer;
+}
+#forward{
+    cursor:pointer;
 }
