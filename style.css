@@ -1,12 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 body{
     background-color: #5cba53;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 *{
     margin: 0;
     padding: 0;
     font-family: 'Ubuntu', sans-serif;
+}
+.fa{
+    opacity: 0;
+}
+.fa:hover{
+    transform: scale(1.5);
+}
+.gaana:hover i{
+    opacity: 1;
+    color: black;
+
+
 }
 
 /* Navigation Bar */
@@ -114,6 +126,9 @@ img.icons{
 .gaana:hover{
     background-color: rgb(25, 83, 25);
     color:white;
+    font-weight:bold;
+    font-size: 16px;
+    
 }
 .play i{
     padding:5px;

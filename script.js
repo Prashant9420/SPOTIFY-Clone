@@ -6,19 +6,19 @@ let masterPlay=document.getElementById('masterPlay');
 let range=document.getElementById('range');
 let backward = document.getElementById('backward');
 let forward = document.getElementById('forward');
-let playSong=document.getElementsByClassName("gaana")[songIndex];
+let playSong=document.getElementById("");
 
 let songs=[
-    {songName:"",filePath:"songs/1.mp3",coverPath:"cover/1.jpg"},
-    {songName:"",filePath:"songs/2.mp3",coverPath:"cover/2.jpg"},
-    {songName:"",filePath:"songs/3.mp3",coverPath:"cover/3.jpg"},
-    {songName:"",filePath:"songs/4.mp3",coverPath:"cover/4.jpg"},
-    {songName:"",filePath:"songs/5.mp3",coverPath:"cover/5.jpg"},
-    {songName:"",filePath:"songs/6.mp3",coverPath:"cover/6.jpg"},
-    {songName:"",filePath:"songs/7.mp3",coverPath:"cover/7.jpg"},
-    {songName:"",filePath:"songs/8.mp3",coverPath:"cover/8.jpg"},
-    {songName:"",filePath:"songs/9.mp3",coverPath:"cover/9.jpg"},
-    {songName:"",filePath:"songs/10.mp3",coverPath:"cover/10.jpg"},
+    {songName:"",filePath:"songs/1.mp3",coverPath:"covers/1.jpg"},
+    {songName:"",filePath:"songs/2.mp3",coverPath:"covers/2.jpg"},
+    {songName:"",filePath:"songs/3.mp3",coverPath:"covers/3.jpg"},
+    {songName:"",filePath:"songs/4.mp3",coverPath:"covers/4.jpg"},
+    {songName:"",filePath:"songs/5.mp3",coverPath:"covers/5.jpg"},
+    {songName:"",filePath:"songs/6.mp3",coverPath:"covers/6.jpg"},
+    {songName:"",filePath:"songs/7.mp3",coverPath:"covers/7.jpg"},
+    {songName:"",filePath:"songs/8.mp3",coverPath:"covers/8.jpg"},
+    {songName:"",filePath:"songs/9.mp3",coverPath:"covers/9.jpg"},
+    {songName:"",filePath:"songs/10.mp3",coverPath:"covers/10.jpg"},
 ];
 
 masterPlay.addEventListener('click', ()=>{
@@ -39,7 +39,7 @@ audioElement.addEventListener('timeupdate', ()=>{
 });
 range.addEventListener('change',()=>{
     audioElement.currentTime=(audioElement.duration*range.value)/100;
-})
+});
 
 backward.addEventListener('click', ()=>{
     audioElement.pause();
@@ -63,11 +63,15 @@ forward.addEventListener('click', ()=>{
     audioElement.play()
 });
 
-// playSong.addEventListener('click', ()=>{
-//     audioElement.pause();
-//     range.value=0;
-//     document.getElementsByClassName("gaana")[];
-//     masterPlay.classList.remove('fa-circle-play');
-//     masterPlay.classList.add('fa-pause-circle');
-    
-// })
+const list = document.querySelectorAll(".fa");
+for(let index=0;index<songs.length;index++){
+    const element=list[index];
+    element.addEventListener("click", ()=>{
+        audioElement.pause();
+        masterPlay.classList.remove('fa-circle-play');
+        masterPlay.classList.add('fa-pause-circle');
+        audioElement=new Audio(songs[index].filePath);
+        audioElement.play();
+    });
+}
+
