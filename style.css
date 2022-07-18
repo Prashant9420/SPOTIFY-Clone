@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 body{
     background-color: #5cba53;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 *{
     margin: 0;
@@ -89,6 +89,10 @@ div.banner{
 img.bg{
     height:470px;
     border-radius:20px;
+    box-shadow: 10px 50px 70px rgb(1, 240, 216),
+        inset 5px 5px 10px rgb(1, 240, 216, 0.25),
+        inset 5px 5px 20px rgb(1, 240, 216, 0.25),
+        inset -5px -5px 15px rgb(1, 240, 216, 0.25);
 }
 div.songs{
     display: flex;
@@ -141,4 +145,13 @@ img.icons{
 }
 #forward{
     cursor:pointer;
+}
+.gif{
+    left:25%;
+    top : 50%;
+    position:absolute;
+}
+.gif img{
+    opacity: 0;
+    width: 60px;
 }
